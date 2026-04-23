@@ -8,7 +8,7 @@ export default function PhotoPreview() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16">
       <div className="flex justify-between items-baseline mb-8">
-        <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted">Photography</p>
+        <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted">Photography</h2>
         <Link href="/gallery" className="font-sans text-xs text-ink-muted hover:text-ink transition-colors">
           View gallery →
         </Link>

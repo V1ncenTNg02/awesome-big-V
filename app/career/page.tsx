@@ -21,9 +21,9 @@ export default function CareerPage() {
 
       {/* Projects */}
       <section className="max-w-5xl mx-auto px-6 py-16 border-b border-parchment">
-        <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-10">
+        <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-10">
           Featured Projects
-        </p>
+        </h2>
         <div className="flex flex-col gap-4">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />

@@ -3,7 +3,7 @@ import { experience } from '@/data/experience'
 export default function ExperienceTimeline() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 border-b border-parchment">
-      <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-10">Experience</p>
+      <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-10">Experience</h2>
       <div className="flex flex-col">
         {experience.map((entry, i) => (
           <div key={`${entry.company}-${entry.period}`} className="flex gap-6">

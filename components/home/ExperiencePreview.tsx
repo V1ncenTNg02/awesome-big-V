@@ -11,9 +11,9 @@ export default function ExperiencePreview() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 border-b border-parchment">
       <div className="flex justify-between items-baseline mb-8">
-        <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted">
+        <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted">
           Experience &amp; Projects
-        </p>
+        </h2>
         <Link href="/career" className="font-sans text-xs text-ink-muted hover:text-ink transition-colors">
           View all →
         </Link>

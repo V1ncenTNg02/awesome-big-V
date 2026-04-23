@@ -1,7 +1,7 @@
 export default function Bio() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 border-b border-parchment">
-      <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">About</p>
+      <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">About</h2>
       <p className="font-serif text-xl text-ink leading-relaxed max-w-2xl">
         Full-stack developer and University of Melbourne graduate, building production SaaS at
         Vellum ESG — from zero-trust security architecture to RAG pipelines and billing

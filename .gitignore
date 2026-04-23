@@ -19,3 +19,5 @@ next-env.d.ts
 *.pem
 .env*
 !.env.example
+
+node_modules/*
