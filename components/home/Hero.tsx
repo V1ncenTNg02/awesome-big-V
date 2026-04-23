@@ -3,9 +3,9 @@ import Link from 'next/link'
 export default function Hero() {
   return (
     <section className="max-w-5xl mx-auto px-6 pt-20 pb-16 border-b border-parchment">
-      <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-4">
+      <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-4">
         Full-stack Developer
-      </h2>
+      </p>
       <h1 className="font-serif text-5xl sm:text-6xl font-normal text-ink leading-tight tracking-tight mb-5">
         Vincent Ng
       </h1>
