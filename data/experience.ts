@@ -90,7 +90,39 @@ export const education: EducationEntry[] = [
   },
 ]
 
-export const certifications = [
-  { name: 'AWS Cloud Practitioner', year: '2023' },
-  { name: 'Foundational C# with Microsoft', year: '2024' },
+export interface Certification {
+  name: string
+  issuer: string
+  issued: string
+  expires?: string
+}
+
+export const certifications: Certification[] = [
+  {
+    name: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services',
+    issued: 'Sep 2023',
+    expires: 'Sep 2026',
+  },
+  {
+    name: 'Foundational C# with Microsoft',
+    issuer: 'freeCodeCamp',
+    issued: 'May 2024',
+  },
+  {
+    name: 'Deloitte Australia – Technology Job Simulation',
+    issuer: 'Forage',
+    issued: 'Mar 2024',
+  },
+  {
+    name: 'Melbourne Plus: Community Engagement',
+    issuer: 'Canvas Credentials (Badgr)',
+    issued: 'Dec 2023',
+  },
+  {
+    name: 'Working With Children Check',
+    issuer: 'Victoria State Government',
+    issued: 'Oct 2023',
+    expires: 'Oct 2028',
+  },
 ]

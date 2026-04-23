@@ -40,11 +40,15 @@ export default function SkillsEducation() {
               </div>
             ))}
           </div>
-          <h3 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-3">Certifications</h3>
-          <ul className="list-none flex flex-col gap-1">
+          <h3 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-3">Certifications &amp; Licences</h3>
+          <ul className="list-none flex flex-col gap-3">
             {certifications.map((cert) => (
-              <li key={cert.name} className="font-sans text-sm text-ink-body leading-relaxed">
-                {cert.name} · {cert.year}
+              <li key={cert.name}>
+                <p className="font-sans text-sm font-semibold text-ink leading-snug">{cert.name}</p>
+                <p className="font-sans text-xs text-ink-muted mt-0.5">
+                  {cert.issuer} · {cert.issued}
+                  {cert.expires ? ` – ${cert.expires}` : ''}
+                </p>
               </li>
             ))}
           </ul>
