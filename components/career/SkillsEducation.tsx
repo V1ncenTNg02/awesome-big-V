@@ -29,7 +29,7 @@ export default function SkillsEducation() {
         {/* Education */}
         <div>
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Education</h2>
-          <div className="flex flex-col gap-5 mb-6">
+          <div className="flex flex-col gap-5">
             {education.map((entry) => (
               <div key={entry.institution}>
                 <p className="font-sans text-sm font-semibold text-ink mb-0.5">{entry.institution}</p>
@@ -40,8 +40,11 @@ export default function SkillsEducation() {
               </div>
             ))}
           </div>
-          <h3 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-3">Certifications &amp; Licences</h3>
-          <ul className="list-none flex flex-col gap-3">
+        </div>
+        {/* Certifications & Licences — full-width row below */}
+        <div className="sm:col-span-2 pt-4 border-t border-parchment">
+          <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Certifications &amp; Licences</h2>
+          <ul className="list-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert) => (
               <li key={cert.name}>
                 <p className="font-sans text-sm font-semibold text-ink leading-snug">{cert.name}</p>
