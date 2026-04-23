@@ -13,10 +13,10 @@ export default function ProjectCard({ project }: { project: Project }) {
         <p className="font-sans text-sm text-ink-body leading-relaxed">{project.description}</p>
       </div>
       {/* Image — right */}
-      <div className="sm:w-52 sm:flex-shrink-0 h-40 sm:h-auto relative bg-parchment">
+      <div className="sm:w-52 sm:flex-shrink-0 h-40 sm:h-full relative bg-parchment">
         <Image
           src={project.image}
-          alt={project.title}
+          alt={`Screenshot: ${project.title}`}
           fill
           className="object-cover"
           sizes="(max-width: 640px) 100vw, 208px"

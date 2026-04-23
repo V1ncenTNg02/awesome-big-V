@@ -33,11 +33,13 @@ export default function SkillsEducation() {
           <p className="font-sans text-sm text-ink-body leading-relaxed mb-1">{education.degree}</p>
           <p className="font-sans text-xs text-ink-muted mb-5">{education.period}</p>
           <p className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-3">Certifications</p>
-          {certifications.map((cert) => (
-            <p key={cert.name} className="font-sans text-sm text-ink-body leading-relaxed">
-              {cert.name} · {cert.year}
-            </p>
-          ))}
+          <ul className="list-none flex flex-col gap-1">
+            {certifications.map((cert) => (
+              <li key={cert.name} className="font-sans text-sm text-ink-body leading-relaxed">
+                {cert.name} · {cert.year}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
