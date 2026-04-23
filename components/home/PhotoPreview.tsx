@@ -16,21 +16,19 @@ export default function PhotoPreview() {
       {preview.length === 0 ? (
         <p className="font-sans text-xs text-ink-muted">Photos coming soon.</p>
       ) : (
-        <Link href="/gallery" className="block">
-          <div className="columns-3 gap-2">
-            {preview.map((photo, i) => (
-              <div key={i} className="break-inside-avoid mb-2">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={photo.width}
-                  height={photo.height}
-                  className="w-full h-auto rounded-sm"
-                />
-              </div>
-            ))}
-          </div>
-        </Link>
+        <div className="columns-3 gap-2">
+          {preview.map((photo) => (
+            <div key={photo.src} className="break-inside-avoid mb-2">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                className="w-full h-auto rounded-sm"
+              />
+            </div>
+          ))}
+        </div>
       )}
     </section>
   )

@@ -6,6 +6,8 @@ export default function ExperiencePreview() {
   const latestJob = experience[0]
   const featuredProject = projects[0]
 
+  if (!latestJob || !featuredProject) return null
+
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 border-b border-parchment">
       <div className="flex justify-between items-baseline mb-8">
@@ -20,7 +22,7 @@ export default function ExperiencePreview() {
         {/* Job preview */}
         <Link
           href="/career"
-          className="border border-parchment rounded-card p-5 bg-white hover:border-ink-muted transition-colors block"
+          className="border border-parchment rounded-card p-5 bg-cream hover:border-ink-muted transition-colors block"
         >
           <div className="flex justify-between items-baseline">
             <span className="font-sans text-sm font-semibold text-ink">{latestJob.company} — {latestJob.role}</span>
@@ -31,11 +33,11 @@ export default function ExperiencePreview() {
         {/* Project preview */}
         <Link
           href="/career"
-          className="border border-parchment rounded-card p-5 bg-white hover:border-ink-muted transition-colors block"
+          className="border border-parchment rounded-card p-5 bg-cream hover:border-ink-muted transition-colors block"
         >
           <div className="flex justify-between items-baseline">
             <span className="font-sans text-sm font-semibold text-ink">{featuredProject.title}</span>
-            <span className="font-sans text-xs text-ink-muted">Project ↗</span>
+            <span className="font-sans text-xs text-ink-muted">View on Career →</span>
           </div>
           <p className="font-sans text-xs text-ink-body mt-1.5">{featuredProject.stack.join(' · ')}</p>
         </Link>
