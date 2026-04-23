@@ -29,9 +29,17 @@ export default function SkillsEducation() {
         {/* Education */}
         <div>
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Education</h2>
-          <p className="font-sans text-sm font-semibold text-ink mb-1">{education.institution}</p>
-          <p className="font-sans text-sm text-ink-body leading-relaxed mb-1">{education.degree}</p>
-          <p className="font-sans text-xs text-ink-muted mb-5">{education.period}</p>
+          <div className="flex flex-col gap-5 mb-6">
+            {education.map((entry) => (
+              <div key={entry.institution}>
+                <p className="font-sans text-sm font-semibold text-ink mb-0.5">{entry.institution}</p>
+                <p className="font-sans text-sm text-ink-body leading-relaxed">{entry.degree}</p>
+                <p className="font-sans text-xs text-ink-muted mt-0.5">
+                  {entry.period}{entry.grade ? ` · Grade: ${entry.grade}` : ''}
+                </p>
+              </div>
+            ))}
+          </div>
           <h3 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-3">Certifications</h3>
           <ul className="list-none flex flex-col gap-1">
             {certifications.map((cert) => (

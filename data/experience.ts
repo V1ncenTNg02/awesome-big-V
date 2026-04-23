@@ -69,12 +69,26 @@ export const experience: ExperienceEntry[] = [
   },
 ]
 
-export const education = {
-  institution: 'The University of Melbourne',
-  degree: 'Bachelor of Science — Computing and Software Systems',
-  period: 'Feb 2021 – Dec 2023',
-  courses: ['Data Structures & Algorithms', 'Database Design', 'Operating Systems', 'Artificial Intelligence'],
+export interface EducationEntry {
+  institution: string
+  degree: string
+  period: string
+  grade?: string
 }
+
+export const education: EducationEntry[] = [
+  {
+    institution: 'The University of Melbourne',
+    degree: 'Bachelor of Science — Computing and Software Systems',
+    period: 'Feb 2021 – Dec 2023',
+  },
+  {
+    institution: 'Trinity College, The University of Melbourne',
+    degree: 'Foundation Degree — Computer Science',
+    period: 'Aug 2019 – Dec 2021',
+    grade: '90.5',
+  },
+]
 
 export const certifications = [
   { name: 'AWS Cloud Practitioner', year: '2023' },
