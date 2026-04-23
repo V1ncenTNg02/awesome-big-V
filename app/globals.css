@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #fffdf7;
+    color: #1a1a1a;
+  }
+}
+
+/* react-masonry-css */
+.masonry-grid {
+  display: flex;
+  gap: 10px;
+}
+.masonry-grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

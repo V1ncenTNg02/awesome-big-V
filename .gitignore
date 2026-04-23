@@ -1,2 +1,20 @@
 .claude/*
 .superpowers/
+
+# Next.js
+.next/
+out/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.DS_Store
+*.pem
+.env*
+!.env.example
