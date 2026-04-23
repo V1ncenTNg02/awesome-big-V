@@ -39,7 +39,8 @@ export default function MasonryGrid({ photos }: { photos: Photo[] }) {
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
-              className="w-full h-auto rounded-[4px] hover:opacity-90 transition-opacity"
+              className="w-full h-auto rounded-[4px] hover:opacity-90 transition-opacity object-cover"
+              sizes="(max-width: 640px) 100vw, 50vw"
               loading="lazy"
             />
           </button>
@@ -51,8 +52,8 @@ export default function MasonryGrid({ photos }: { photos: Photo[] }) {
           photos={photos}
           index={lightboxIndex}
           onClose={() => setLightboxIndex(null)}
-          onPrev={() => setLightboxIndex((i) => ((i ?? 0) - 1 + photos.length) % photos.length)}
-          onNext={() => setLightboxIndex((i) => ((i ?? 0) + 1) % photos.length)}
+          onPrev={() => setLightboxIndex((lightboxIndex - 1 + photos.length) % photos.length)}
+          onNext={() => setLightboxIndex((lightboxIndex + 1) % photos.length)}
         />
       )}
     </>
