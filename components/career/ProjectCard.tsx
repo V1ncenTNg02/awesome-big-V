@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           alt={`Screenshot: ${project.title}`}
           fill
           className="object-cover"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 900px"
         />
       </div>
     </div>
