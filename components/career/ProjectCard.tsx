@@ -11,6 +11,14 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.stack.join(' · ')}
         </p>
         <p className="font-sans text-sm text-ink-body leading-relaxed">{project.description}</p>
+        <ul className="mt-4 pt-4 border-t border-parchment list-none flex flex-col gap-2">
+          {project.bullets.map((bullet, i) => (
+            <li key={i} className="font-sans text-sm text-ink-body leading-relaxed flex gap-2">
+              <span className="text-ink-muted flex-shrink-0">•</span>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
       </div>
       {/* Image — right */}
       <div className="sm:w-52 sm:flex-shrink-0 h-40 sm:h-full relative bg-parchment">
