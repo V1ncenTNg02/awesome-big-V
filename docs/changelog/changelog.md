@@ -18,6 +18,15 @@ All notable changes to this project are documented here, newest first.
 
 ## [Unreleased]
 
+### 2026-04-24 — Add CI/CD pipeline for GCP Cloud Run deployment
+- **Type:** `feat`
+- **Files:** `Dockerfile`, `.dockerignore`, `.github/workflows/deploy.yml`, `next.config.ts`
+- **Summary:**
+  - **Before:** No deployment pipeline; site was running locally only.
+  - **After:** Push to `main` triggers a GitHub Actions workflow that builds a Docker image, pushes it to Artifact Registry (`us-central1-docker.pkg.dev/general-gcp-project-493207/portfolio/awesome-big-v`), and deploys to Cloud Run service `awesome-big-v` in `us-central1`. `next.config.ts` updated to `output: 'standalone'` for the Docker standalone server.
+- **Migration notes:** Requires one-time GCP setup — see manual steps in session log.
+- **Rollback:** Delete the Cloud Run service in GCP Console; revert `next.config.ts` if needed.
+
 ### Add Greythorn IDO Platform project card
 - **Type:** `feat`
 - **Files:** `data/projects.ts`, `public/projects/next-ido.png`

@@ -24,7 +24,12 @@ Format per entry:
 **How to apply:** <when this kicks in, what to do or avoid>
 -->
 
-*(No special requirements recorded yet. Add the first one when discovered.)*
+### REQ-001 — Cloud Run deployment requires standalone Next.js output
+**Discovered:** 2026-04-24
+**Area:** infra
+**Requirement:** `next.config.ts` must keep `output: 'standalone'`. Removing it breaks the Docker build — the standalone server.js is not generated without it.
+**Why:** The Dockerfile copies `.next/standalone` as the production server. Without standalone mode Next.js does not produce this directory.
+**How to apply:** Never remove `output: 'standalone'` from next.config.ts without updating the Dockerfile and CI pipeline.
 
 ---
 
@@ -48,6 +53,26 @@ Format per entry:
 
 **Files changed:** <comma-separated list of the key files modified>
 -->
+
+### 2026-04-24 — Add GCP Cloud Run CI/CD pipeline
+**Completed:**
+- Created `Dockerfile` (multi-stage Next.js standalone build, node:20-alpine)
+- Created `.dockerignore`
+- Created `.github/workflows/deploy.yml` (GitHub Actions → Artifact Registry → Cloud Run)
+- Updated `next.config.ts` with `output: 'standalone'`
+- Recorded ADR-001 in `docs/decisions/decisions.md`
+
+**Decisions made:**
+- GitHub Actions over Cloud Build (simpler, repo already on GitHub)
+- Service account key auth over Workload Identity Federation (simpler for solo portfolio project)
+- Cloud Run `min-instances=0` (scale to zero, cost-effective for portfolio)
+
+**Blockers / open questions:**
+- User must complete one-time GCP manual setup before pipeline will work (see below)
+
+**Files changed:** `Dockerfile`, `.dockerignore`, `.github/workflows/deploy.yml`, `next.config.ts`, `docs/decisions/decisions.md`, `docs/changelog/changelog.md`
+
+---
 
 ### 2026-04-24 — Fill in CLAUDE.md project settings
 **Completed:**

@@ -43,6 +43,33 @@ Which option was chosen and why? State the decision clearly in one sentence.
 
 <!-- Add new decisions below, newest first -->
 
+### [ADR-001] — Deploy to GCP Cloud Run via GitHub Actions
+- **Date:** 2026-04-24
+- **Status:** Accepted
+- **Deciders:** Vincent Ng
+- **Tags:** infrastructure
+
+**Context**
+Portfolio site needs a hosting target. Initial assumption was Vercel, but decision was made
+to use GCP Cloud Run to keep everything within an existing GCP project (`general-gcp-project-493207`).
+
+**Options considered**
+1. Vercel — zero-config Next.js hosting, free tier, no containers required
+2. GCP Cloud Run (GitHub Actions) — containerised, full control, uses existing GCP project
+3. GCP Cloud Run (Cloud Build) — same runtime but more GCP-native CI/CD setup
+
+**Decision**
+GCP Cloud Run with GitHub Actions (Option 2). Keeps infrastructure in one GCP project and
+uses GitHub Actions because the repo is already on GitHub, making trigger setup trivial.
+
+**Consequences**
+- Positive: Full control over container; stays within existing GCP project; CI/CD is versioned in the repo
+- Negative: Requires Docker knowledge to debug; service account key stored as GitHub secret (long-lived credential)
+- Risks: Service account key exposure — mitigated by limiting SA to minimum required roles; upgrade to Workload Identity Federation when needed
+
+**Review trigger**
+If long-lived SA key becomes a compliance concern, migrate to Workload Identity Federation.
+
 <!-- Example:
 
 ### [ADR-001] — Use UTC timestamps everywhere
