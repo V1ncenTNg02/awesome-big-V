@@ -18,6 +18,15 @@ All notable changes to this project are documented here, newest first.
 
 ## [Unreleased]
 
+### 2026-04-24 — Add README
+- **Type:** `docs`
+- **Files:** `README.md`
+- **Summary:**
+  - **Before:** No README existed at the repo root.
+  - **After:** README added with project description, live site link, tech stack, and local dev + deployment instructions.
+- **Migration notes:** None
+- **Rollback:** Delete `README.md`
+
 ### 2026-04-24 — Add CI/CD pipeline for GCP Cloud Run deployment
 - **Type:** `feat`
 - **Files:** `Dockerfile`, `.dockerignore`, `.github/workflows/deploy.yml`, `next.config.ts`
