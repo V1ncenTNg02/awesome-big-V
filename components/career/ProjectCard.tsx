@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Project } from '@/data/projects'
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, priority = false }: { project: Project; priority?: boolean }) {
   return (
     <div className="border border-parchment rounded-card overflow-hidden bg-cream flex flex-col">
       {/* Text */}
@@ -29,6 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           height={0}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 900px"
           className="w-full h-auto"
+          priority={priority}
         />
       </div>
     </div>

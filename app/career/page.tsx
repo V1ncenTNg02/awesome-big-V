@@ -25,8 +25,8 @@ export default function CareerPage() {
           Featured Projects
         </h2>
         <div className="flex flex-col gap-4">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {projects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} priority={i === 0} />
           ))}
         </div>
       </section>
