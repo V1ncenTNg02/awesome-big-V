@@ -12,21 +12,7 @@ export default function SkillsEducation() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-        {/* Skills */}
-        <div>
-          <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Skills</h2>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="font-sans text-xs text-ink-body border border-parchment rounded-sm px-2.5 py-1"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-        {/* Education */}
+        {/* Education — left */}
         <div>
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Education</h2>
           <div className="flex flex-col gap-5">
@@ -41,10 +27,21 @@ export default function SkillsEducation() {
             ))}
           </div>
         </div>
-        {/* Certifications & Licences — full-width row below */}
-        <div className="sm:col-span-2 pt-4 border-t border-parchment">
+        {/* Skills + Certifications — right */}
+        <div>
+          <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Skills</h2>
+          <div className="flex flex-wrap gap-2 mb-10">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="font-sans text-xs text-ink-body border border-parchment rounded-sm px-2.5 py-1"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Certifications &amp; Licences</h2>
-          <ul className="list-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ul className="list-none flex flex-col gap-4">
             {certifications.map((cert) => (
               <li key={cert.name}>
                 <p className="font-sans text-sm font-semibold text-ink leading-snug">{cert.name}</p>
