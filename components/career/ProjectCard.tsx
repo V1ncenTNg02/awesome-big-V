@@ -20,14 +20,15 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </ul>
       </div>
-      {/* Image — bottom, full width */}
-      <div className="relative h-56 w-full bg-parchment">
+      {/* Image — bottom, full width, natural height */}
+      <div className="w-full bg-parchment">
         <Image
           src={project.image}
           alt={`Screenshot: ${project.title}`}
-          fill
-          className="object-cover"
+          width={0}
+          height={0}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 900px"
+          className="w-full h-auto"
         />
       </div>
     </div>
