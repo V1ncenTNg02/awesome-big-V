@@ -13,7 +13,7 @@ export default function SkillsEducation() {
     <section className="max-w-5xl mx-auto px-6 py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
         {/* Education — left */}
-        <div>
+        <div className="h-full">
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Education</h2>
           <div className="flex flex-col gap-5">
             {education.map((entry) => (
@@ -28,7 +28,7 @@ export default function SkillsEducation() {
           </div>
         </div>
         {/* Skills + Certifications — right */}
-        <div>
+        <div className="h-full">
           <h2 className="font-sans text-xs uppercase tracking-[2px] text-ink-muted mb-6">Skills</h2>
           <div className="flex flex-wrap gap-2 mb-10">
             {skills.map((skill) => (
