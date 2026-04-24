@@ -6,7 +6,21 @@ export default function ProjectCard({ project, priority = false }: { project: Pr
     <div className="border border-parchment rounded-card overflow-hidden bg-cream flex flex-col">
       {/* Text */}
       <div className="p-6 flex flex-col">
-        <h3 className="font-sans text-sm font-semibold text-ink mb-1.5">{project.title}</h3>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 group mb-1.5"
+          >
+            <h3 className="font-sans text-sm font-semibold text-ink group-hover:underline underline-offset-2">
+              {project.title}
+            </h3>
+            <span className="text-ink-muted text-xs">↗</span>
+          </a>
+        ) : (
+          <h3 className="font-sans text-sm font-semibold text-ink mb-1.5">{project.title}</h3>
+        )}
         <p className="font-sans text-xs text-ink-muted mb-3 tracking-wide">
           {project.stack.join(' · ')}
         </p>
@@ -25,11 +39,12 @@ export default function ProjectCard({ project, priority = false }: { project: Pr
         <Image
           src={project.image}
           alt={`Screenshot: ${project.title}`}
-          width={0}
-          height={0}
+          width={project.imageWidth}
+          height={project.imageHeight}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 900px"
           className="w-full h-auto"
           priority={priority}
+          loading={priority ? 'eager' : 'lazy'}
         />
       </div>
     </div>

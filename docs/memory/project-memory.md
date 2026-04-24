@@ -49,7 +49,21 @@ Format per entry:
 **Files changed:** <comma-separated list of the key files modified>
 -->
 
-*(No sessions recorded yet.)*
+### 2026-04-24 — Fill in CLAUDE.md project settings
+**Completed:**
+- Replaced all `<placeholder>` values in `.claude/CLAUDE.md` with actual project details
+- Added Design Tokens section (Tailwind custom colours, fonts, border-radius)
+- Documented known pitfalls: Next.js Image dimensions, missing docs, empty skill dirs
+
+**Decisions made:**
+- Noted that `docs/design/ui-design.md` and `docs/testing/testing-strategy.md` do not exist yet — must be created from templates before frontend/implementation work
+- Noted that `skills/general/` and `skills/infra/` are empty — workflow skills not yet built
+
+**Blockers / open questions:**
+- `docs/design/ui-design.md` needs to be created before next frontend session
+- No test framework installed — testing rules are aspirational
+
+**Files changed:** `.claude/CLAUDE.md`, `docs/memory/project-memory.md`
 
 ---
 

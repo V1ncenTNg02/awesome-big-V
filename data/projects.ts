@@ -4,6 +4,9 @@ export interface Project {
   description: string
   bullets: string[]
   image: string
+  imageWidth: number
+  imageHeight: number
+  url?: string
 }
 
 export const projects: Project[] = [
@@ -17,16 +20,36 @@ export const projects: Project[] = [
       'Integrated a RAG pipeline for ESG document Q&A; identified and resolved a hybrid search bottleneck to significantly improve answer quality and processing speed',
     ],
     image: '/projects/vellum-esg.png',
+    imageWidth: 1917,
+    imageHeight: 699,
+    url: 'https://vellum.com.au/',
   },
   {
-    title: 'Intelligent Voicemail System',
+    title: 'Intelligent Clinic',
     stack: ['Next.js', 'OpenAI', 'Supabase', 'Cloud Run'],
-    description: 'An AI-powered voicemail triage system that automatically extracts intent, urgency, and key details from incoming messages using an LLM-driven workflow architecture.',
+    description: 'An AI-powered clinic management system that automatically extracts patient intent, urgency, and key details from incoming messages using an LLM-driven workflow architecture.',
     bullets: [
-      'Designed an intelligent pipeline that classifies voicemail intent and urgency using OpenAI',
+      'Designed an intelligent pipeline that classifies patient intent and urgency using OpenAI',
       'Persisted structured triage results in Supabase for downstream retrieval and notifications',
       'Deployed as a containerised production workflow on GCP Cloud Run',
     ],
-    image: '/projects/voicemail-system.png',
+    image: '/projects/intelligent-clinic.png',
+    imageWidth: 2532,
+    imageHeight: 693,
+    url: 'https://heidi-challenge-820963910490.us-central1.run.app/',
+  },
+  {
+    title: 'Greythorn IDO Platform',
+    stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Storyblok', 'PostgreSQL', 'Docker'],
+    description: 'Two full-stack single-page applications built for Greythorn Asset Management, integrating blockchain features to enhance data security and transparency for investment clients.',
+    bullets: [
+      'Delivered two full-stack SPAs with blockchain integration, improving data security and transparency for asset management clients',
+      'Built component-driven UI with TypeScript, Next.js, and TailwindCSS; managed content via Storyblok CMS',
+      'Added unit tests across React components to improve reliability and catch regressions early',
+    ],
+    image: '/projects/next-ido.png',
+    imageWidth: 1199,
+    imageHeight: 495,
+    url: 'https://next-ido.vercel.app/',
   },
 ]
