@@ -54,6 +54,20 @@ Format per entry:
 **Files changed:** <comma-separated list of the key files modified>
 -->
 
+### 2026-04-28 — Populate gallery photos data
+**Completed:**
+- Added all 24 photos (`img-001.jpg`–`img-024.jpg`) to `data/photos.ts` with correct intrinsic pixel dimensions measured via `sharp`
+
+**Decisions made:**
+- Used generic `alt` text (`Photo 1`–`Photo 24`) since filenames carry no descriptive information — user can update with meaningful descriptions later
+
+**Blockers / open questions:**
+- `alt` text values are placeholders; consider updating with descriptive captions for accessibility
+
+**Files changed:** `data/photos.ts`, `docs/changelog/changelog.md`
+
+---
+
 ### 2026-04-24 — Add GCP Cloud Run CI/CD pipeline
 **Completed:**
 - Created `Dockerfile` (multi-stage Next.js standalone build, node:20-alpine)

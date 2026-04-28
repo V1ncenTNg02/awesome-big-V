@@ -18,6 +18,24 @@ All notable changes to this project are documented here, newest first.
 
 ## [Unreleased]
 
+### 2026-04-28 — Populate photos data for gallery page
+- **Type:** `feat`
+- **Files:** `data/photos.ts`
+- **Summary:**
+  - **Before:** `photos` array was empty; gallery page rendered no images.
+  - **After:** All 24 photos (`img-001.jpg`–`img-024.jpg`) added with correct intrinsic pixel dimensions measured via `sharp`. Gallery now displays the full masonry grid.
+- **Migration notes:** None.
+- **Rollback:** Clear the `photos` array back to `[]`.
+
+### 2026-04-28 — Rename gallery photos to naming convention
+- **Type:** `chore`
+- **Files:** `public/photos/` (24 files renamed)
+- **Summary:**
+  - **Before:** Photos had original camera filenames (`_DSC0252.jpg`, Chinese characters, mixed-case `.JPG`/`.jpg` extensions).
+  - **After:** All 24 photos renamed to `img-001.jpg` → `img-024.jpg` (zero-padded, lowercase, alphabetical order of original names).
+- **Migration notes:** `data/photos.ts` still has an empty array — populate it with the new `img-NNN.jpg` filenames and dimensions when ready to display the gallery.
+- **Rollback:** N/A — original filenames were camera-generated with no semantic meaning.
+
 ### 2026-04-24 — Add README
 - **Type:** `docs`
 - **Files:** `README.md`
