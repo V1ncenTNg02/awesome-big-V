@@ -39,6 +39,20 @@ export const projects: Project[] = [
     url: 'https://heidi-challenge-820963910490.us-central1.run.app/',
   },
   {
+    title: 'LKG Furniture Market Researcher',
+    stack: ['Claude Code Plugin', 'Claude Platform', 'LangGraph', 'Claude', 'Python', 'FastAPI', 'AWS Lambda'],
+    description: 'A Claude Code plugin and Claude Platform hosted agent system that adapts Anthropic\'s market-researcher template for Australian bedding, mattresses, sleep products, and bedroom furniture — producing weekly digests for Hypnos Group / LK Group.',
+    bullets: [
+      'Built a 7-subagent orchestration pipeline (sector overview, competitive analysis, comps, idea generation, GM/Board classifier, note writer) with parallel research execution and a human-approval gate before any output is distributed',
+      'Added two custom Claude Code skills — lkg-furniture-market-digest and gm-board-classifier — that encode Hypnos Group context, a 10-public-source scan, and GM / Board / Both / Ignore routing criteria with confidence and guardrail rules',
+      'Deployed the same agent definitions as a Claude Platform Managed Agent via a SAM-style deploy script, enabling production governance (model selection, tool permissions, structured run logs) without rebuilding the plugin from scratch',
+    ],
+    image: '/projects/furniture-market-plugin.png',
+    imageWidth: 895,
+    imageHeight: 545,
+    url: 'https://github.com/V1ncenTNg02/lkg-furniture-market-researcher/tree/main',
+  },
+  {
     title: 'Property Development Control Tower',
     stack: ['Next.js', 'FastAPI', 'LangGraph', 'Claude', 'Supabase', 'AWS Lambda', 'Docker'],
     description: 'A full-stack AI agent prototype for property development risk management — monitors project signals, detects risks, selects stakeholders, and drafts targeted communications without human triage.',

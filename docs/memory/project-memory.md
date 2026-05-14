@@ -54,6 +54,38 @@ Format per entry:
 **Files changed:** <comma-separated list of the key files modified>
 -->
 
+### 2026-05-14 — Update experience entries from latest resume
+**Completed:**
+- Vellum: added 5th bullet (PostgreSQL schemas), added Tailwind CSS to stack, expanded BFF wording to match resume
+- China Unicom: renamed to "China Unicom Australia", location → Melbourne VIC, role → IT Support Technician, added stack, normalised period dash, updated to 3 bullets
+- Greythorn: added Storyblok to stack, updated to 3 bullets matching resume
+
+**Decisions made:**
+- None architectural
+
+**Blockers / open questions:**
+- None
+
+**Files changed:** `data/experience.ts`, `docs/changelog/changelog.md`
+
+---
+
+### 2026-05-14 — Add LKG Furniture Market Researcher project entry
+**Completed:**
+- Added fifth project to `data/projects.ts` as the first entry (most prominent position)
+- Image `public/projects/furniture-market-plugin.png` intrinsic dimensions measured (895×545)
+- Three bullets covering the 7-subagent pipeline, two custom skills, and Claude Platform deployment
+
+**Decisions made:**
+- Positioned as first project to lead with the most recent / AI-agent-focused work
+
+**Blockers / open questions:**
+- None
+
+**Files changed:** `data/projects.ts`, `docs/changelog/changelog.md`
+
+---
+
 ### 2026-05-14 — Add Property Development Control Tower project entry
 **Completed:**
 - Added fourth project to `data/projects.ts` with title, stack, description, 3 bullets, image path, and live demo URL

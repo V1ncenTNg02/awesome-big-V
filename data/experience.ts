@@ -13,12 +13,25 @@ export const experience: ExperienceEntry[] = [
     role: 'Full-stack Developer',
     location: 'Melbourne, VIC',
     period: 'Nov 2024 – Mar 2026',
-    stack: ['TypeScript', 'Next.js', 'Node.js', 'GCP', 'RAG'],
+    stack: ['TypeScript', 'Next.js', 'Node.js', 'Tailwind CSS', 'GCP', 'RAG', 'Python'],
     bullets: [
       'Integrated LLM and RAG workflows into ESG reporting, enhancing automated reporting process',
-      'Re-architected frontend and backend using SOLID, MVC and introduced a BFF layer to improve system security, session handling and API scalability',
+      'Re-architected frontend and backend using SOLID, MVC and introduced a Backend-for-Frontend (BFF) layer to improve system security, session handling and API scalability',
       'Implemented Stripe billing and Postmark email automation systems, enabling event-driven customer and internal notification workflows',
       'Implemented CI/CD and containerised deployments on GCP Cloud Run, cutting release time by ~30%',
+      'Designed PostgreSQL schemas and optimised queries to support scalable ESG reporting workflows',
+    ],
+  },
+  {
+    company: 'China Unicom Australia',
+    role: 'IT Support Technician',
+    location: 'Melbourne, VIC',
+    period: 'May 2024 – Nov 2024',
+    stack: ['Microsoft O365', 'Network Technology'],
+    bullets: [
+      'Resolved on-site and remote technical issues across network and enterprise systems, improving incident turnaround time and user satisfaction',
+      'Automated monthly network reporting workflows, reducing manual effort by ~50% and improving data accuracy',
+      'Standardised network maintenance reporting using reusable templates, improving consistency and reducing reporting errors',
     ],
   },
   {
@@ -26,21 +39,11 @@ export const experience: ExperienceEntry[] = [
     role: 'Frontend Developer Intern',
     location: 'Melbourne, VIC',
     period: 'Jan 2024 – Mar 2024',
-    stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'PostgreSQL', 'Docker'],
+    stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Storyblok', 'PostgreSQL', 'Docker'],
     bullets: [
-      'Developed marketing and client-facing SPAs in Next.js/TypeScript, delivering responsive, production-ready interfaces',
-      'Worked with RESTful APIs and PostgreSQL-backed services to surface portfolio and analytics data in the UI',
-    ],
-  },
-  {
-    company: 'China Unicom',
-    role: 'IT Support',
-    location: 'China',
-    period: '2022',
-    stack: [],
-    bullets: [
-      'Provided network operations support and resolved client technical issues under time pressure',
-      'Automated monthly reporting workflow, reducing manual effort by ~50%',
+      'Built responsive client-facing and marketing SPAs using Next.js and TypeScript, delivering production-ready UI components',
+      'Collaborated with backend APIs and CMS (Storyblok) to integrate dynamic content and improve content delivery workflows',
+      'Contributed to containerised development workflows using Docker, ensuring consistency across development environments',
     ],
   },
   {
@@ -60,7 +63,7 @@ export const experience: ExperienceEntry[] = [
     company: 'Dalongyi Hot Pot',
     role: 'Waiter',
     location: 'Melbourne, VIC',
-    period: 'Jan 2022 – Mar 2022',
+    period: 'Jan 2022 – Jul 2022',
     stack: [],
     bullets: [
       'Delivered front-of-house service in a busy CBD restaurant, handling customer communication and unexpected situations under pressure',

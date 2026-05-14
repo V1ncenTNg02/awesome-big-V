@@ -18,6 +18,24 @@ All notable changes to this project are documented here, newest first.
 
 ## [Unreleased]
 
+### 2026-05-14 — Update Vellum, China Unicom, and Greythorn experience entries
+- **Type:** `feat`
+- **Files:** `data/experience.ts`
+- **Summary:**
+  - **Before:** Vellum had 4 bullets and no Tailwind CSS in stack; China Unicom listed as "China Unicom" in China with 2 bullets and no stack; Greythorn had 2 bullets and no Storyblok in stack.
+  - **After:** Vellum: added 5th bullet (PostgreSQL schemas), added Tailwind CSS to stack, expanded BFF bullet wording. China Unicom: renamed to "China Unicom Australia", location corrected to Melbourne VIC, role updated to "IT Support Technician", stack added (Microsoft O365, Network Technology), period dash normalised, bullets updated to 3 matching resume. Greythorn: added Storyblok to stack, bullets updated to 3 matching resume.
+- **Migration notes:** None.
+- **Rollback:** Revert `data/experience.ts` to previous content.
+
+### 2026-05-14 — Add LKG Furniture Market Researcher project
+- **Type:** `feat`
+- **Files:** `data/projects.ts`, `public/projects/furniture-market-plugin.png`
+- **Summary:**
+  - **Before:** Four projects listed on the career/projects section.
+  - **After:** Fifth project "LKG Furniture Market Researcher" added as the first entry, with image (`895×545`), tech stack, description, and three bullets covering the subagent pipeline, custom skills, and Claude Platform deployment. GitHub repo URL included.
+- **Migration notes:** None.
+- **Rollback:** Remove the new project entry from `data/projects.ts`.
+
 ### 2026-05-14 — Add Property Development Control Tower project
 - **Type:** `feat`
 - **Files:** `data/projects.ts`, `public/projects/property-dev.png`
