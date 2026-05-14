@@ -54,6 +54,22 @@ Format per entry:
 **Files changed:** <comma-separated list of the key files modified>
 -->
 
+### 2026-05-14 — Add Property Development Control Tower project entry
+**Completed:**
+- Added fourth project to `data/projects.ts` with title, stack, description, 3 bullets, image path, and live demo URL
+- Image `public/projects/property-dev.png` intrinsic dimensions measured (1897×655) via PowerShell System.Drawing
+
+**Decisions made:**
+- Positioned new project second-to-last (before Greythorn IDO) to maintain rough reverse-chronological order
+- Extracted 3 bullets from README focusing on agent architecture, AWS deployment, and Supabase data model
+
+**Blockers / open questions:**
+- None
+
+**Files changed:** `data/projects.ts`, `docs/changelog/changelog.md`
+
+---
+
 ### 2026-04-28 — Populate gallery photos data
 **Completed:**
 - Added all 24 photos (`img-001.jpg`–`img-024.jpg`) to `data/photos.ts` with correct intrinsic pixel dimensions measured via `sharp`

@@ -39,6 +39,20 @@ export const projects: Project[] = [
     url: 'https://heidi-challenge-820963910490.us-central1.run.app/',
   },
   {
+    title: 'Property Development Control Tower',
+    stack: ['Next.js', 'FastAPI', 'LangGraph', 'Claude', 'Supabase', 'AWS Lambda', 'Docker'],
+    description: 'A full-stack AI agent prototype for property development risk management — monitors project signals, detects risks, selects stakeholders, and drafts targeted communications without human triage.',
+    bullets: [
+      'Built an 8-node LangGraph agent that classifies contractor emails with Claude, updates project risk levels, and selects stakeholders via rule-based notification logic',
+      'Architected a dual-Lambda deployment (Next.js + FastAPI) on AWS using SAM and Lambda Web Adapter with a full GitHub Actions CI/CD pipeline',
+      'Designed the data model on Supabase PostgreSQL with Supabase connection pooler to handle serverless burst connections safely across cold starts',
+    ],
+    image: '/projects/property-dev.png',
+    imageWidth: 1897,
+    imageHeight: 655,
+    url: 'https://g77qqkbg42g6s7pni2ociwjrbu0tedjw.lambda-url.ap-southeast-2.on.aws/',
+  },
+  {
     title: 'Greythorn IDO Platform',
     stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Storyblok', 'PostgreSQL', 'Docker'],
     description: 'Two full-stack single-page applications built for Greythorn Asset Management, integrating blockchain features to enhance data security and transparency for investment clients.',

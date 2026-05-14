@@ -18,6 +18,15 @@ All notable changes to this project are documented here, newest first.
 
 ## [Unreleased]
 
+### 2026-05-14 — Add Property Development Control Tower project
+- **Type:** `feat`
+- **Files:** `data/projects.ts`, `public/projects/property-dev.png`
+- **Summary:**
+  - **Before:** Three projects listed on the career/projects section.
+  - **After:** Fourth project "Property Development Control Tower" added with image (`1897×655`), tech stack, description, and three bullets extracted from the GitHub README. Live demo URL included.
+- **Migration notes:** None.
+- **Rollback:** Remove the new project entry from `data/projects.ts`.
+
 ### 2026-04-28 — Populate photos data for gallery page
 - **Type:** `feat`
 - **Files:** `data/photos.ts`
